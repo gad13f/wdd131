@@ -82,7 +82,7 @@ main h1 {
 
 /* LIMIT IMAGE SIZE (This fixes the oversized image issue) */
 .card img {
-    max-width: 60%;
+    max-width: 70%;
     height: auto;
     display: block;
     margin: 0 auto 1rem auto;
@@ -119,7 +119,7 @@ footer {
 }
 
 .flag-img {
-    width: 1000px;
+    width: 800px;
     height: auto;
     border: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
