@@ -26,6 +26,10 @@ header {
     cursor: pointer;
 }
 
+nav{
+    display:flex;
+}
+
 #menu::before {
     content: "☰";
 }
