@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Country Place: Mexico</title>
+    <link rel="stylesheet" href="styles/places.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Mexico</h1>
+    </header>
+    <main>
+    <div class="hero">
+        <picture>
+            <!-- Imagen para pantallas grandes (computadoras) -->
+            <source srcset="images/mexico-large.webp" media="(min-width: 1500px)">
+            <!-- Imagen para pantallas medianas (tabletas) -->
+            <source srcset="images/mexico-medium.webp" media="(min-width: 1000px)">
+            <!-- Imagen predeterminada / pequeña (móviles) con atributos width y height para evitar saltos de diseño -->
+            <img src="images/mexico-small.webp" alt="Paisaje representativo del país" width="1000" height="500">
+        </picture>
+    </div>
+
+    <div class="content-grid">
+        
+        <!-- (Data) -->
+        <section class="card data-card">
+            <h2>Data<img src="images/data_info_icon.svg" alt="icon data" class="title-icon"></h2>
+            <ul>
+                <li><strong>Area:</strong> 1,964,375 sq km</li>
+                <li><strong>Population:</strong> 129,386,000</li>
+                <li><strong>Capital:</strong> Ciudad de Mexico</li>
+                <li><strong>Languages:</strong> Spanish (and 68 indigenous languages)</li>
+                <li><strong>Currency:</strong> Mexican peso (MXN)</li>
+                <li><strong>Time Zone:</strong> UTC-5 to UTC-8</li>
+                <li><strong>Calling Code:</strong> +52</li>
+                <li><strong>Internet TLD:</strong> .mx</li>
+            </ul>
+        </section>
+
+        <!--  (Weather) -->
+        <section class="card weather-card">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <ul>
+                <li><strong>Temperature:</strong> <span id="temp">8</span> °C</li>
+                <li><strong>Conditions:</strong> Partly Cloudy</li>
+                <li><strong>Wind:</strong> <span id="wind">6</span> km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windchill">N/A</span></li>
+            </ul>
+        </section>
+
+    </div>
+   </main>
+
+   <footer>
+    <p>&copy; <span id="current year"></span> | Gad Cerda Lara | Mexico</p>
+    <p>last update: <span id="lastmodified"></span></p>
+   </footer>
+</body>
+</html>

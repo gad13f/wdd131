@@ -1,0 +1,169 @@
+/* --- 1. Global Variables --- */
+:root {
+    --primary-color: #006847; /* Mexican flag green */
+    --secondary-color: #ce1126; /* Mexican flag red */
+    --accent-color: #f4c300; /* Gold / Yellow */
+    --bg-color: #f4f4f4;
+    --card-bg: rgba(255, 255, 255, 0.95); /* Slightly translucent background */
+    --text-color: #333333;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- 2. General Styles --- */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+/* --- 3. Hero Image (Mobile View) --- */
+main {
+    position: relative;
+}
+
+.hero {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- 4. Card Container (Mobile View: stacked vertically) --- */
+.content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Card General Style */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid var(--primary-color);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 8px;
+    font-size: 1.5rem;
+    
+    /* Agrega esto para que el SVG no quede amontonado si el título es largo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilo para ajustar el tamaño y alineación del SVG junto al título */
+.card h2 .title-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card ul li:last-child {
+    border-bottom: none;
+}
+
+/* --- 5. Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* --- 6. Media Queries for Large Screens (Desktop / Wide Wireframe) --- */
+@media (min-width: 768px) {
+    /* Larger hero image height on desktop */
+    .hero {
+        height: 550px;
+    }
+
+    /* Floating positioning characteristic of the course wireframes */
+    .content-grid {
+        position: absolute;
+        top: 100px; /* Overlaps upwards onto the hero image */
+        left: 0;
+        right: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two symmetrical columns */
+        justify-content: space-between;
+        padding: 0 40px;
+        pointer-events: none; /* Allows mouse clicks through the empty grid */
+    }
+
+    /* Re-enable mouse events for individual cards */
+    .card {
+        pointer-events: auto;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Requirement: Pseudo-element for the weather icon in desktop next to the h2 */
+    .weather-card h2::after {
+        content: " ⛅";
+        font-size: 1.3rem;
+    }
+
+    /* Hide the inline mobile icon when using the desktop pseudo-element */
+    .weather-card .weather-icon {
+        display: none;
+    }
+}
