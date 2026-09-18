@@ -21,7 +21,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1.2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -70,28 +70,19 @@ main {
     border-top: 5px solid var(--primary-color);
 }
 
+/* Unified and corrected block for .card h2 (Removes the duplicate rule error) */
 .card h2 {
     margin-top: 0;
     color: var(--primary-color);
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 8px;
     font-size: 1.5rem;
-}
-
-.card h2 {
-    margin-top: 0;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 8px;
-    font-size: 1.5rem;
-    
-    /* Agrega esto para que el SVG no quede amontonado si el título es largo */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* Estilo para ajustar el tamaño y alineación del SVG junto al título */
+/* Style to adjust size and alignment of the SVG next to the title */
 .card h2 .title-icon {
     width: 24px;
     height: 24px;
@@ -119,7 +110,7 @@ main {
 /* --- 5. Footer --- */
 footer {
     background-color: var(--primary-color);
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1.5rem;
     margin-top: 20px;
