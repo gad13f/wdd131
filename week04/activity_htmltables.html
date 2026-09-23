@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Feature Comparison</title>
+    <style>
+        /* color scheme */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        /* Style for the table */
+        caption {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 16px;
+            background-color: #ecf0f1;
+            border-bottom: 2px solid #bdc3c7;
+            caption-side: top;
+        }
+
+        /* Table header */
+        thead {
+            background-color: #3498db;
+            color: white;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: center;
+        }
+
+        th:first-child, td:first-child {
+            text-align: left; /* Align feature names to the left */
+        }
+
+        th {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Data cells */
+        td {
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.95rem;
+        }
+
+        /* Zebra striping using*/
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Optional hover effect for better interactivity */
+        tbody tr:hover {
+            background-color: #edf2f7;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>Table 1: Account Feature Comparison</caption>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Basic Account</th>
+                <th>Premium Account</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Access to basic content</td>
+                <td>✔️</td>
+                <td>✔️</td>
+            </tr>
+            <tr>
+                <td>Ad-free experience</td>
+                <td>❌</td>
+                <td>✔️</td>
+            </tr>
+            <tr>
+                <td>Offline downloads</td>
+                <td>❌</td>
+                <td>✔️</td>
+            </tr>
+            <tr>
+                <td>24/7 Customer Support</td>
+                <td>❌</td>
+                <td>✔️</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
