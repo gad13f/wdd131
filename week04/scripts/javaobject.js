@@ -1,4 +1,4 @@
-// 1. Objeto literal del curso con la propiedad sections (arreglo de objetos)
+// Objeto of  sections
 const aCourse = {
   code: "WDD131",
   title: "Dynamic Web Fundamentals",
@@ -9,12 +9,12 @@ const aCourse = {
   ]
 };
 
-// 2. Función para mostrar el código y el título del curso
+//  Function to display course code and title
 function setCourseInformation(course) {
   document.querySelector("#courseName").innerHTML = `${course.code} – ${course.title}`;
 }
 
-// 3. Función para renderizar las secciones como filas de una tabla
+//  Functions to render the sections in table
 function renderSections(course) {
   const tbody = document.querySelector("#sections tbody");
   let rows = "";
@@ -30,6 +30,6 @@ function renderSections(course) {
   tbody.innerHTML = rows;
 }
 
-// 4. Ejecución de las funciones pasando el objeto como argumento
+//  Execution of the functions passing the object as an argument
 setCourseInformation(aCourse);
 renderSections(aCourse);

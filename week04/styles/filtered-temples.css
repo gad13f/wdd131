@@ -1,0 +1,51 @@
+/* Main grid container */
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Style for each temple card */
+.res-grid figure {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.res-grid figure:hover {
+  transform: translateY(-5px);
+}
+
+/* Temple title on the card */
+.res-grid h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 15px 0 10px;
+}
+
+/* Information paragraphs (location, date, area) */
+.res-grid p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 5px 15px;
+}
+
+.res-grid p span {
+  font-weight: bold;
+  color: #222;
+}
+
+/* Temple image */
+.res-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 10px;
+}
