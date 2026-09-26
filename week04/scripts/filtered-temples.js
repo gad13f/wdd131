@@ -80,10 +80,10 @@ const temples = [
   }
 ];
 
-// Función para mostrar las tarjetas dinámicamente
+// Function of targets
 const createTempleCard = (filteredTemples) => {
   const container = document.querySelector(".res-grid");
-  container.innerHTML = ""; // Limpia el contenedor antes de dibujar
+  container.innerHTML = ""; // clean the container
   
   filteredTemples.forEach((temple) => {
     let card = document.createElement("figure");
@@ -100,10 +100,10 @@ const createTempleCard = (filteredTemples) => {
   });
 };
 
-// Muestra todos los templos por defecto al cargar la página
+
 createTempleCard(temples);
 
-// Eventos de los filtros de navegación
+// filters
 document.querySelector("#home").addEventListener("click", () => {
   createTempleCard(temples);
 });
@@ -128,6 +128,6 @@ document.querySelector("#small").addEventListener("click", () => {
   createTempleCard(filtered);
 });
 
-// Año actual y última modificación en el footer
+// dates
 document.querySelector("#currentyear").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
