@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product review form</title>
+    <!-- link to CSS file -->
+    <link rel="stylesheet" href="styles/form.css">
+    <!-- Link to a java file -->
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            
+            <!-- Name of the product -->
+            <fieldset>
+                <legend>Product Information</legend>
+                
+                <label for="productName">Product Name <span class="required">*</span></label>
+                <select id="productName" name="productName" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </fieldset>
+
+            <!-- General calification-->
+            <fieldset>
+                <legend>Overall Rating <span class="required">*</span></legend>
+                <div class="rating-group">
+                    <label><input type="radio" name="rating" value="1" required> &star;</label>
+                    <label><input type="radio" name="rating" value="2"> &star;&star;</label>
+                    <label><input type="radio" name="rating" value="3"> &star;&star;&star;</label>
+                    <label><input type="radio" name="rating" value="4"> &star;&star;&star;&star;</label>
+                    <label><input type="radio" name="rating" value="5"> &star;&star;&star;&star;&star;</label>
+                </div>
+            </fieldset>
+
+            <!-- installation date -->
+            <fieldset>
+                <legend>Installation Date</legend>
+                <label for="installDate">Date of Installation <span class="required">*</span></label>
+                <input type="date" id="installDate" name="installDate" required>
+            </fieldset>
+
+            <!-- useful features -->
+            <fieldset>
+                <legend>Useful Features (Check all that apply)</legend>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="features" value="durability"> Durability</label>
+                    <label><input type="checkbox" name="features" value="ease"> Ease of Use</label>
+                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
+                    <label><input type="checkbox" name="features" value="design"> Design</label>
+                </div>
+            </fieldset>
+
+            <!-- Review -->
+            <fieldset>
+                <legend>Written Review</legend>
+                <label for="writtenReview">Write your review (Optional):</label>
+                <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
+            </fieldset>
+
+            <!-- Name of user-->
+            <fieldset>
+                <legend>Your Information</legend>
+                <label for="userName">User Name (Optional):</label>
+                <input type="text" id="userName" name="userName">
+            </fieldset>
+
+            <!-- Button -->
+            <div class="submit-box">
+                <input type="submit" value="Post Review">
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Gad Cerda Lara | Matamoros tamaulipas</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
