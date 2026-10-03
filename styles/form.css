@@ -114,3 +114,16 @@ footer {
     text-decoration: none;
     border-radius: 4px;
 }
+
+/* Media query */
+@media (max-width: 600px) {
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .rating-group, .checkbox-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
