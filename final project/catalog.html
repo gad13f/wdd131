@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - New Vintage</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand-title">New Vintage</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalog.html" class="active">Colección / Catálogo</a></li>
+                <li><a href="references.html">Referencias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Colección Autenticada</h2>
+            <p>Explora nuestras piezas únicas de ropa, accesorios retro y decoración histórica.</p>
+            
+            <!-- Contenedor dinámico controlado por JavaScript -->
+            <div id="dynamic-container" class="grid-container"></div>
+        </section>
+
+        <section style="margin-top: 4rem;">
+            <h2>Regístrate como Entusiasta Vintage</h2>
+            <form id="user-form">
+                <label for="username">Tu Nombre:</label>
+                <input type="text" id="username" required placeholder="Ej. Sofía Gómez">
+
+                <label for="preference">Categoría de interés favorita:</label>
+                <select id="preference" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Ropa Vintage">Ropa Vintage</option>
+                    <option value="Accesorios Retro">Accesorios Retro</option>
+                    <option value="Decoración Histórica">Decoración Histórica</option>
+                </select>
+
+                <button type="submit">Guardar mis Preferencias</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 New Vintage. Todos los derechos reservados. <a href="references.html">Ver referencias</a></p>
+    </footer>
+</body>
+</html>
