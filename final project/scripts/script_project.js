@@ -1,22 +1,22 @@
-// Arreglo de objetos con datos de la tienda "New Vintage"
+// Array of objects with "New Vintage" store data
 const vintageProducts = [
-    { title: "Chaqueta de Cuero 70s", category: "Ropa Vintage", price: "$120.00 USD", description: "Auténtica chaqueta de los años 70 en excelente estado de conservación.", image: "images/jacket.jpg" },
-    { title: "Gafas de Sol Retro", category: "Accesorios Retro", price: " $45.00 USD", description: "Montura clásica dorada de diseño histórico único.", image: "images/glasses.jpg" },
-    { title: "Reloj de Mesa Art Déco", category: "Decoración Histórica", price: "$85.00 USD", description: "Pieza decorativa restaurada de mediados del siglo XX.", image: "images/clock.jpg" }
+    { title: "Retro Sunglasses", category: "Vintage Accessories", price: "$70.00 USD", description: "Classic gold frame with a unique historical design, crafted with lightweight metal and vintage inspired lenses.", image: "images/glasses.jpg" },
+    { title: "70s Leather Jacket", category: "Vintage Clothing", price: "$120.00 USD", description: "Authentic 1970s jacket in excellent condition, made from premium, durable materials with classic retro tailoring.", image: "images/jacket.jpg" },
+    { title: "Historic Vintage Watch", category: "Historic Vintage Watch", price: "$300.00 USD", description: "Piece from the mid-20th century with a weathered leather strap. a classic timepiece that transcends time.", image: "images/watch.jpg" }
 ];
 
-// Función 1: Renderizar productos usando Template Literals y métodos de arreglos
+// Function 1: Render products using Template Literals and array methods
 function displayProducts(products) {
     const container = document.getElementById("dynamic-container");
-    if (!container) return; // Si no estamos en la página del catálogo, termina
+    if (!container) return; // If we are not on the catalog page, exit
 
-    // Uso estricto de Template Literals y .map()
+    // Strict use of Template Literals and .map()
     container.innerHTML = products.map(product => `
         <div class="card">
             <img src="${product.image}" alt="${product.title}" loading="lazy">
             <div class="card-content">
                 <h3>${product.title}</h3>
-                <p><strong>Categoría:</strong> ${product.category}</p>
+                <p><strong>Category:</strong> ${product.category}</p>
                 <p>${product.description}</p>
                 <div class="price">${product.price}</div>
             </div>
@@ -24,36 +24,36 @@ function displayProducts(products) {
     `).join("");
 }
 
-// Función 2: Manejar eventos de envío de formulario y guardar en LocalStorage
+// Function 2: Handle form submission events and save to LocalStorage
 function setupUserPreferencesForm() {
     const form = document.getElementById("user-form");
     if (!form) return;
 
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Evita recargar la página
+        event.preventDefault(); // Prevent page reload
 
         const userName = document.getElementById("username").value.trim();
         const userPref = document.getElementById("preference").value;
 
-        // Condicionales de validación
+        // Validation conditionals
         if (userName === "" || userPref === "") {
-            alert("Por favor, completa todos los campos requeridos.");
+            alert("Please fill in all required fields.");
             return;
         }
 
-        // Guardar datos en el LocalStorage
+        // Save data to LocalStorage
         localStorage.setItem("nv_userName", userName);
         localStorage.setItem("nv_userPreference", userPref);
 
-        alert(`¡Gracias, ${userName}! Tus preferencias de "${userPref}" han sido guardadas.`);
+        alert(`Thank you, ${userName}! Your preferences for "${userPref}" have been saved.`);
         form.reset();
         
-        // Actualizar saludo en tiempo real
+        // Update greeting in real-time
         checkLocalStorageUser();
     });
 }
 
-// Función 3: Verificar y mostrar saludo personalizado usando LocalStorage
+// Function 3: Check and display personalized greeting using LocalStorage
 function checkLocalStorageUser() {
     const welcomeEl = document.getElementById("welcome-message");
     if (!welcomeEl) return;
@@ -61,15 +61,15 @@ function checkLocalStorageUser() {
     const savedName = localStorage.getItem("nv_userName");
     const savedPref = localStorage.getItem("nv_userPreference");
 
-    // Condicionales para mostrar el mensaje adecuado con template literals
+    // Conditionals to display appropriate message with template literals
     if (savedName && savedPref) {
-        welcomeEl.textContent = `¡Bienvenido de nuevo, ${savedName}! Nos alegra saber que te interesa nuestra sección de ${savedPref}.`;
+        welcomeEl.textContent = `Welcome back, ${savedName}! We're glad to know you're interested in our ${savedPref} section.`;
     } else {
-        welcomeEl.textContent = "¡Bienvenido a New Vintage! Explora nuestra colección y guarda tus preferencias abajo.";
+        welcomeEl.textContent = "Welcome to New Vintage! Explore our collection and save your preferences below.";
     }
 }
 
-// Ejecutar funciones al cargar completamente el DOM
+// Execute functions once the DOM is fully loaded
 window.addEventListener("DOMContentLoaded", () => {
     displayProducts(vintageProducts);
     setupUserPreferencesForm();
