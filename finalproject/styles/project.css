@@ -110,7 +110,6 @@ main {
   opacity: 0.9;
 }
 
-/* Cuadrícula de Productos (JS Dinámico) */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -154,7 +153,6 @@ main {
   padding-top: 1rem;
 }
 
-/* Formulario */
 form {
   background: var(--white);
   padding: 2.5rem;
@@ -197,7 +195,6 @@ button[type="submit"]:hover {
   color: var(--primary-blue);
 }
 
-/* Footer */
 footer {
   background-color: var(--primary-blue);
   color: var(--white);
@@ -212,7 +209,6 @@ footer a {
   text-decoration: underline;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -228,10 +224,6 @@ footer a {
     font-size: 2.2rem;
   }
 }
-
-/* ===================================
-   Testimonials & Helpers (No inline styles)
-   =================================== */
 
 .welcome-section {
     text-align: center;
